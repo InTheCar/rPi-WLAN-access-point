@@ -22,7 +22,6 @@
 #sudo systemctl stop systemd-resolved
 #sudo systemctl disable systemd-resolved
 #sudo systemctl mask systemd-resolved
-sudo rm /etc/netplan/*
 sudo cp ./conf/netplan/* /etc/netplan/
 
 
