@@ -1,0 +1,14 @@
+network:
+  version: 2
+  renderer: NetworkManager
+  wifis:
+    wlan0:
+      dhcp4: true
+      optional: true
+      access-points:
+        "wifiap":
+          auth:
+            key-management: psk
+            password: "password"
+          mode: ap
+          band: 2.4GHz
