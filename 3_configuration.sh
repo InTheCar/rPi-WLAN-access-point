@@ -19,4 +19,8 @@ sudo systemctl restart dhcpcd
 sudo systemctl restart dnsmasq
 sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 sudo iptables-save
+sudo systemctl stop systemd-resolved
+sudo systemctl disable systemd-resolved
+sudo systemctl mask systemd-resolved
+
 
