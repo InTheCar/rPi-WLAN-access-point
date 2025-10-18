@@ -1,6 +1,8 @@
 #!/bin/bash
 apps=(
+  "dnsmasq"
   "hostapd"
+  "iptables"
 )
 SECONDS=0
 for i in "${apps[@]}"
