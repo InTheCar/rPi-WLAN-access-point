@@ -13,10 +13,8 @@ sudo cp ./conf/dhcp/* /etc/dhcp/
 
 sudo cp ./conf/hostapd/* /etc/hostapd/
  
-sudo cp ./conf/hostapd/* /etc/hostapd/ 
-
-
-
+sudo cp ./conf/hostapd/* /etc/hostapd/
+sudo cp /etc/hostapd/hostapd_WPA_PSK.conf /etc/hostapd/hostapd.conf
 sudo cp ./conf/etc/* /etc/
 sudo systemctl unmask hostapd
 sudo systemctl enable hostapd
