@@ -19,4 +19,6 @@ sudo cp ./conf/hostapd/* /etc/hostapd/
 
 sudo cp ./conf/etc/* /etc/
 sudo systemctl restart dhcpcd
+sudo systemctl restart dnsmasq
+
 
