@@ -2,11 +2,13 @@ network:
   renderer: NetworkManager
   ethernets:
     eth0:
+      link-local: []
       dhcp4: true
       optional: true
     version: 2
   wifis:
     wlan0:
+      link-local: []
       dhcp4: true
       optional: true
       access-points:
