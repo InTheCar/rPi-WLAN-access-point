@@ -1,5 +1,8 @@
 #!/bin/bash
 command=(
+  "sudo systemctl stop systemd-resolved"
+  "sudo systemctl disable systemd-resolved"
+  "sudo systemctl mask systemd-resolved"
   "sudo snap refresh"
   "sudo apt-get update"
   "sudo apt-get -y upgrade"
