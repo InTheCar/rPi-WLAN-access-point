@@ -3,6 +3,8 @@ apps=(
   "dnsmasq"
   "hostapd"
   "iptables"
+  "rfkill"
+  "wireless-tools"
 )
 SECONDS=0
 for i in "${apps[@]}"
