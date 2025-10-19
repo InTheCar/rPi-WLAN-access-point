@@ -23,5 +23,6 @@
 #sudo systemctl disable systemd-resolved
 #sudo systemctl mask systemd-resolved
 sudo cp ./conf/netplan/* /etc/netplan/
+sudo chmod 600 /etc/netplan/*
 
 
