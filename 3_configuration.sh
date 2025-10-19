@@ -10,7 +10,7 @@
 #sudo systemctl enable systemd-networkd
 
 sudo cp ./conf/resolve/* /run/systemd/resolve/
-sudo cp ./conf/
+sudo cp ./conf/NetworkManager/* /etc/NetworkManager/
 #sudo cp ./conf/dhcp/* /etc/dhcp/
 #sudo cp ./conf/hostapd/* /etc/hostapd/
 #sudo cp /etc/hostapd/hostapd_WPA_PSK.conf /etc/hostapd/hostapd.conf
