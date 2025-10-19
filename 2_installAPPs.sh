@@ -5,6 +5,7 @@ apps=(
   "openvswitch-switch-dpdk"
   "hostapd"
   "dnsmasq"
+  "net-tools"
 )
 #  "dnsmasq"
 #  "hostapd"
