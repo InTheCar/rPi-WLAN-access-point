@@ -1,6 +1,8 @@
 #!/bin/bash
 apps=(
   "network-manager"
+  "linux-modules-extra-raspi"
+  "openvswitch-switch-dpdk"
 )
 #  "dnsmasq"
 #  "hostapd"
