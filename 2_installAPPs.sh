@@ -1,9 +1,10 @@
 #!/bin/bash
 apps=(
-  "dnsmasq"
-  "hostapd"
-  "iptables"
+  "network-manager"
 )
+#  "dnsmasq"
+#  "hostapd"
+#  "iptables"
 SECONDS=0
 for i in "${apps[@]}"
 do
