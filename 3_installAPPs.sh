@@ -28,6 +28,7 @@ apps=(
   "iptables"
   "rfkill"
   "wireless-tools"
+  "wpasupplicant"
 
 )
 #  "dnsmasq"
