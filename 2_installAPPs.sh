@@ -1,11 +1,11 @@
 #!/bin/bash
 apps=(
   "network-manager"
-  "linux-modules-extra-raspi"
   "openvswitch-switch-dpdk"
   "hostapd"
   "dnsmasq"
   "net-tools"
+  "linux-modules-extra-raspi"
 )
 #  "dnsmasq"
 #  "hostapd"
@@ -23,4 +23,6 @@ echo "time for installing apps needed:"
 echo "$((duration / 60)) minutes and $((duration % 60)) seconds elapsed."
 echo ""
 echo "reboot needed"
+sudo reboot
+
 
