@@ -3,6 +3,8 @@ apps=(
   "network-manager"
   "linux-modules-extra-raspi"
   "openvswitch-switch-dpdk"
+  "hostapd"
+  "dnsmasq"
 )
 #  "dnsmasq"
 #  "hostapd"
