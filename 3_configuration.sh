@@ -7,25 +7,33 @@
 
 #------------------------------------------------------------------
 
+echo Stopping NetworkManager.service
 sudo systemctl stop NetworkManager.service
+echo Stopping NetworkManager-wait-online.service
 sudo systemctl stop NetworkManager-wait-online.service
+echo Stopping NetworkManager-dispatcher.service
 sudo systemctl stop NetworkManager-dispatcher.service
-sudo systemctl stop network-manager.service
 
 sudo cp ./conf/NetworkManager/* /etc/NetworkManager/
 
-sudo systemctl start network-manager.service
+echo Starting NetworkManager-dispatcher.service
 sudo systemctl start NetworkManager-dispatcher.service
+echo Starting NetworkManager-wait-online.service
 sudo systemctl start NetworkManager-wait-online.service
+echo Starting NetworkManager.service
 sudo systemctl start NetworkManager.service
 
 #------------------------------------------------------------------
 
+echo Stopping systemd-resolved
 sudo systemctl stop systemd-resolved
+echo Disable systemd-resolved
 sudo systemctl disable systemd-resolved
 
+echo cp./conf/resolve/* ./run/systemd/resolve/
 sudo cp./conf/resolve/* ./run/systemd/resolve/
 
+echo Restart dnsmasq.service
 sudo systemctl restart dnsmasq.service
 
 #------------------------------------------------------------------
