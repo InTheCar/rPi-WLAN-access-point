@@ -50,8 +50,7 @@ sudo systemctl stop systemd-resolved
 echo Disable systemd-resolved
 sudo systemctl disable systemd-resolved
 
-echo cp./conf/resolve/* /run/systemd/resolve/
-sudo cp./conf/resolve/* /run/systemd/resolve/
+echo cp./etc/* /etc/
 
 echo Restart dnsmasq.service
 sudo systemctl restart dnsmasq.service
