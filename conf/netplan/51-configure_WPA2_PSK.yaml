@@ -4,6 +4,7 @@ network:
   wifis:
     wlan0:
       dhcp4: true
+      dhcp6: false
       optional: true
       access-points:
         "wifiap":
@@ -12,3 +13,6 @@ network:
             password: "password"
           mode: ap
           band: 2.4GHz
+          networkmanager:
+            passthrough:
+              wifi-security.proto: "rsn" # WPA2 only
