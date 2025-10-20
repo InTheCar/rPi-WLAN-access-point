@@ -51,7 +51,8 @@ echo Disable systemd-resolved
 sudo systemctl disable systemd-resolved
 
 echo cp./etc/* /etc/
-
+ln -s /etc/systemd/system/wifiap@wlan0 \
+  /etc/systemd/system/multi-user.target.wants/wifiap@wlan0
 echo Restart dnsmasq.service
 sudo systemctl restart dnsmasq.service
 
