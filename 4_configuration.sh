@@ -26,16 +26,16 @@ echo "$((duration / 60)) minutes and $((duration % 60)) seconds elapsed."
 echo ""
 
 #------------------------------------------------------------------
-echo cp./etc/* /etc/
-sudo cp./etc/* /etc/
+sudo rm /etc/netplan/51-*
+echo cp -rv ./conf/etc/* /etc/
+sudo cp -rv ./conf/etc/* /etc/
+sudo chmod 600 /etc/netplan/*
 echo Stopping NetworkManager.service
 sudo systemctl stop NetworkManager.service
 echo Stopping NetworkManager-wait-online.service
 sudo systemctl stop NetworkManager-wait-online.service
 echo Stopping NetworkManager-dispatcher.service
 sudo systemctl stop NetworkManager-dispatcher.service
-
-sudo cp ./conf/NetworkManager/* /etc/NetworkManager/
 
 echo Starting NetworkManager-dispatcher.service
 sudo systemctl start NetworkManager-dispatcher.service
@@ -59,16 +59,14 @@ sudo systemctl restart dnsmasq.service
 
 #------------------------------------------------------------------
 
-sudo rm /etc/netplan/51-*
-sudo cp ./conf/netplan/51-configure_WEP.yaml /etc/netplan/
-sudo chmod 600 /etc/netplan/*
+
+
 sudo netplan generate
 sudo netplan apply
 
 
 
 
-sudo cp ./conf/hostapd/* /etc/hostapd/
 sudo cp /etc/hostapd/hostapd_WPA_PSK.conf /etc/hostapd/hostapd.conf
 sudo systemctl unmask hostapd
 sudo systemctl enable hostapd
