@@ -26,7 +26,8 @@ echo "$((duration / 60)) minutes and $((duration % 60)) seconds elapsed."
 echo ""
 
 #------------------------------------------------------------------
-
+echo cp./etc/* /etc/
+sudo cp./etc/* /etc/
 echo Stopping NetworkManager.service
 sudo systemctl stop NetworkManager.service
 echo Stopping NetworkManager-wait-online.service
@@ -50,8 +51,8 @@ sudo systemctl stop systemd-resolved
 echo Disable systemd-resolved
 sudo systemctl disable systemd-resolved
 
-echo cp./etc/* /etc/
-ln -s /etc/systemd/system/wifiap@wlan0 \
+
+sudo ln -s /etc/systemd/system/wifiap@wlan0 \
   /etc/systemd/system/multi-user.target.wants/wifiap@wlan0
 echo Restart dnsmasq.service
 sudo systemctl restart dnsmasq.service

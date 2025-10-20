@@ -19,7 +19,7 @@ duration=$SECONDS
 echo "time for installing apps needed:"
 echo "$((duration / 60)) minutes and $((duration % 60)) seconds elapsed."
 echo ""
-echo "reboot needed"
+echo "will perform reboot"
 sudo reboot
 
 
