@@ -1,4 +1,6 @@
 #!/bin/bash
+echo wait for cloud-init
+cloud-init status --wait
 apps=(
   "linux-modules-extra-raspi"
 )
