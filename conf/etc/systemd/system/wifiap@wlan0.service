@@ -5,11 +5,13 @@ Wants=network.target
 Before=network.target
 BindsTo=sys-subsystem-net-devices-%i.device
 After=sys-subsystem-net-devices-%i.device
+Conflicts=wpa_supplicant
 
 [Service]
 Type=oneshot
 RemainAfterExit=yes
 
+ExecStart = systemctrl stop wpa_supplicant
 ExecStart = /sbin/ip link set %i up
 ExecStart = /sbin/wpa_supplicant -B -i %i -c /etc/wpa_supplicant/%p
 ExecStart = /usr/sbin/hostapd -B -i radio /etc/hostapd/%p
