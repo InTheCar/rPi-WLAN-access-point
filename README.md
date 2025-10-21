@@ -19,7 +19,8 @@ the file can be found here after installation:
 #### hostapd.conf for open WiFi
 #### hostapd for open WEP
 
-### hostapd.conf parameter
+### hostapd.conf parameters
+
 
 
 

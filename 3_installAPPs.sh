@@ -27,14 +27,11 @@ appsinstall=(
   "iptables"
   "rfkill"
   "wireless-tools"
-  "wpasupplicant"
 )
 appsremove=(
   "wpasupplicant"
+  "network-manager"
 )
-#  "dnsmasq"
-#  "hostapd"
-#  "iptables"
 SECONDS=0
 for i in "${appsinstall[@]}"
 do
