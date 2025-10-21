@@ -25,6 +25,7 @@ The SSIDs are following this syntax:
 wifi_[encryption]
 
 wifi_OPEN -> open access point
+
 wifi_WEP  -> uses WEP
 
 
