@@ -8,3 +8,22 @@ dnsmasq is used for a DHCP and DNS
 
 
 
+
+
+## hostapd config file
+### location
+the file can be found here after installation:
+```
+/etc/hostapd/hostapd.conf
+```
+### hostapd.conf examples
+#### hostapd.conf for open WiFi
+#### hostapd for open WEP
+
+### hostapd.conf parameter
+
+
+
+
+
+
