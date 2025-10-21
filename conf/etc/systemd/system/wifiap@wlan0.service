@@ -11,7 +11,6 @@ Conflicts=wpa_supplicant
 Type=oneshot
 RemainAfterExit=yes
 
-ExecStart = systemctrl stop wpa_supplicant
 ExecStart = /sbin/ip link set %i up
 ExecStart = /sbin/wpa_supplicant -B -i %i -c /etc/wpa_supplicant/%p
 ExecStart = /usr/sbin/hostapd -B -i radio /etc/hostapd/%p
