@@ -20,7 +20,6 @@ echo ""
 
 
 appsinstall=(
-  "network-manager"
   "openvswitch-switch-dpdk"
   "hostapd"
   "net-tools"
