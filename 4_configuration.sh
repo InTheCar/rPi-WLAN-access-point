@@ -38,11 +38,11 @@ echo Stopping NetworkManager-dispatcher.service
 sudo systemctl stop NetworkManager-dispatcher.service
 
 echo Starting NetworkManager-dispatcher.service
-sudo systemctl start NetworkManager-dispatcher.service
+sudo systemctl disable NetworkManager-dispatcher.service
 echo Starting NetworkManager-wait-online.service
-sudo systemctl start NetworkManager-wait-online.service
+sudo systemctl disable NetworkManager-wait-online.service
 echo Starting NetworkManager.service
-sudo systemctl start NetworkManager.service
+sudo systemctl disable NetworkManager.service
 
 #------------------------------------------------------------------
 
@@ -52,8 +52,8 @@ echo Disable systemd-resolved
 sudo systemctl disable systemd-resolved
 
 
-sudo ln -s /etc/systemd/system/wifiap@wlan0.service \
-  /etc/systemd/system/multi-user.target.wants/wifiap@wlan0.service
+#sudo ln -s /etc/systemd/system/wifiap@wlan0.service \
+#  /etc/systemd/system/multi-user.target.wants/wifiap@wlan0.service
 echo Restart dnsmasq.service
 sudo systemctl restart dnsmasq.service
 

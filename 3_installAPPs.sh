@@ -19,7 +19,7 @@ echo "$((duration / 60)) minutes and $((duration % 60)) seconds elapsed."
 echo ""
 
 
-apps=(
+appsinstall=(
   "network-manager"
   "openvswitch-switch-dpdk"
   "hostapd"
@@ -29,17 +29,25 @@ apps=(
   "rfkill"
   "wireless-tools"
   "wpasupplicant"
-
+)
+appsremove=(
+  "wpasupplicant"
 )
 #  "dnsmasq"
 #  "hostapd"
 #  "iptables"
 SECONDS=0
-for i in "${apps[@]}"
+for i in "${appsinstall[@]}"
 do
   echo ""
   echo "perform: sudo apt-get -y install $i"
   eval sudo apt-get -y install $i || echo failed: sudo apt-get -y install $i
+done
+for i in "${appsremove[@]}"
+do
+  echo ""
+  echo "perform: sudo apt-get -y remove $i"
+  eval sudo apt-get -y remove $i || echo failed: sudo apt-get -y remove $i
 done
 echo ""
 duration=$SECONDS
