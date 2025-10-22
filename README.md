@@ -40,7 +40,7 @@ the configuration of the access point:
 
 setWiFi.sh PATTERN [OPTIONS]
 
-PATTERN:
+**PATTERN:**
 
   open : an open access point will be configured
 
@@ -49,7 +49,7 @@ PATTERN:
    wpa : an WPA (Wi-Fi Protected Access) access point will be configured
 
 
-OPTIONS:
+**OPTIONS:**
 
     -d : debug, more output for trouble shooting
    
