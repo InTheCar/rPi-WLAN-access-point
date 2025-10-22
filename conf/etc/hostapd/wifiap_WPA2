@@ -4,8 +4,9 @@
 interface=wlan0
 driver=nl80211
 
-#ctrl_interface=/var/run/hostapd
-#ctrl_interface_group=0
+# hostap_cli interface
+ctrl_interface=/var/run/hostapd
+ctrl_interface_group=0
 
 # WiFi configuration
 ssid=wifi_WPA2

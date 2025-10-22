@@ -4,10 +4,11 @@
 interface=wlan0
 driver=nl80211
 
+# hostap_cli interface
 ctrl_interface=/var/run/hostapd
 ctrl_interface_group=0
 
-# WiFi configuration
+# WiFi configuration common
 ssid=wifi_OPEN
 channel=1
 hw_mode=g
