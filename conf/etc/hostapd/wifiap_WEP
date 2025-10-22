@@ -14,9 +14,11 @@ channel=1
 hw_mode=g
 country_code=DE
 
-# WiFi encryption
+# MAC address -based authentication / Hidden SSID
 macaddr_acl=0
 ignore_broadcast_ssid=0
+
+# WiFi encryption
 eap_server=0
 wep_key1="wifi1"
 wep_key_len_broadcast=5
