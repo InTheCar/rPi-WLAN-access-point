@@ -56,12 +56,20 @@ setWiFi.sh PATTERN [OPTIONS]
 ## The Configurations
 ### open
 password: none
+
+configuration file: `wifiap_OPEN`
 ### WEP
 password: wifi1
+
+configuration file: `wifiap_WEP`
 ### WPA
 password: wifi1234
+
+configuration file: `wifiap_WPA`
 ### WPA2
 password: wifi1234
+
+configuration file: `wifiap_WPA2`
 
 
 
