@@ -2,6 +2,7 @@
 ## known problems open points
 - testing if it's working like expected
 - improvement of documentation
+- try to remove the packadge "openvswitch-switch-dpdk". I think it's not needed.
 
 ## My target
 My target is not to have a access point for testing. I want to understand the termologie and especilly the hostapd 
@@ -13,8 +14,10 @@ https://github.com/InTheCar/WiFi-sniffer
 
 
 ## lesson learned
-- wpa_supplicant is needed only if the rPi is acting as a client
+- wpa_supplicant is needed only if the rPi is acting as a client. So I don't need it.
 - hostapd is used if the rPi is acting as an access point
+- If you make changes in the hostapd.conf use a systemctl stop start and not a reload. It's not the same.
+- 
 
 
 ## HW/SW used
