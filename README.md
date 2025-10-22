@@ -1,10 +1,11 @@
 # rPi-WLAN-access-point
-## known problems open points with this reposotory
-- missing other configurations (WEP, WPA, WPA2 ....)
-- 
+## known problems open points
+- testing if it's working like expected
+- improvement of documentation
 
 ## My target
-My target is not to have a new access point. I want to understand the termologie and especilly the hostapd.
+My target is not to have a access point for testing. I want to understand the termologie and especilly the hostapd 
+service.
 If you want to use it, please take a better password than me.
 Using a rPi which is connected via ethernet to the internet as a WLAN access point.
 
