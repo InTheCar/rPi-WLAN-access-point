@@ -28,8 +28,27 @@ https://github.com/InTheCar/WiFi-sniffer
 - **networkd** is used
 - **NetworkManager** is not installed
 
-#### Here you can find the manual for installation:
+## Here you can find the manual for installation:
+I made a .rtf document
 https://github.com/InTheCar/rPi-WLAN-access-point/tree/main/docs
+
+## set a wifi "security"
+During the installtion you will clone this peposetory. Ther you find a script to change 
+the configuration of the access point:
+
+~/[repository rPi-WLAN-access-point]/**setWiFi.sh**
+
+setWiFi.sh PATTERN [OPTIONS]
+PATTERN:
+  open : an open access point will be configured"
+   wep : an WEP (Wired Equivalent Privacy) access point will be configured"
+   wpa : an WPA (Wi-Fi Protected Access) access point will be configured"
+
+OPTIONS:
+    -d : debug, more output for trouble shooting"
+   
+
+
 
 
 
