@@ -62,7 +62,29 @@ ssid        : **wifi_OPEN**
 configuration file: `wifiap_OPEN`
 
 configuration file content:
-``
+`# Wi-Fi Access Point OPEN
+
+# interface and driver
+interface=wlan0
+driver=nl80211
+
+# hostap_cli interface
+ctrl_interface=/var/run/hostapd
+ctrl_interface_group=0
+
+# WiFi configuration common
+ssid=wifi_OPEN
+channel=1
+hw_mode=g
+country_code=DE
+
+# MAC address -based authentication / Hidden SSID
+macaddr_acl=0
+ignore_broadcast_ssid=0
+
+# WiFi encryption
+# it's open
+`
 ### WEP
 password    : **wifi1**
 
@@ -71,7 +93,33 @@ ssid        : **wifi_WEP**
 configuration file: `wifiap_WEP`
 
 configuration file content:
-``
+`# Wi-Fi Access Point WEP
+
+# interface and driver
+interface=wlan0
+driver=nl80211
+
+# hostap_cli interface
+ctrl_interface=/var/run/hostapd
+ctrl_interface_group=0
+
+# WiFi configuration
+ssid=wifi_WEP
+channel=1
+hw_mode=g
+country_code=DE
+
+# MAC address -based authentication / Hidden SSID
+macaddr_acl=0
+ignore_broadcast_ssid=0
+
+# WiFi encryption
+eap_server=0
+wep_key1="wifi1"
+wep_key_len_broadcast=5
+wep_key_len_unicast=5
+wep_rekey_period=300
+`
 ### WPA
 password: wifi1234
 
@@ -80,7 +128,31 @@ ssid        : **wifi_WPA**
 configuration file: `wifiap_WPA`
 
 configuration file content:
-``
+`# Wi-Fi Access Point WPA
+
+# interface and driver
+interface=wlan0
+driver=nl80211
+
+# hostap_cli interface
+ctrl_interface=/var/run/hostapd
+ctrl_interface_group=0
+
+# WiFi configuration
+ssid=wifi_WPA
+channel=1
+hw_mode=g
+country_code=DE
+
+# MAC address -based authentication / Hidden SSID
+macaddr_acl=0
+ignore_broadcast_ssid=0
+
+# WiFi encryption
+wpa=1
+wpa_key_mgmt=WPA-PSK
+wpa_passphrase=wifi1234
+`
 ### WPA2
 password: wifi1234
 
@@ -89,7 +161,31 @@ ssid        : **wifi_WPA2**
 configuration file: `wifiap_WPA2`
 
 configuration file:
-``
+`# Wi-Fi Access Point WPA2
+
+# interface and driver
+interface=wlan0
+driver=nl80211
+
+# hostap_cli interface
+ctrl_interface=/var/run/hostapd
+ctrl_interface_group=0
+
+# WiFi configuration
+ssid=wifi_WPA2
+channel=1
+hw_mode=g
+country_code=DE
+
+# MAC address -based authentication / Hidden SSID
+macaddr_acl=0
+ignore_broadcast_ssid=0
+
+# WiFi encryption
+wpa=2
+wpa_key_mgmt=WPA-PSK
+wpa_passphrase=wifi1234
+`
 
 
 ########################################################################
