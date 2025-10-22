@@ -1,11 +1,21 @@
 # rPi-WLAN-access-point
+## known problems open points with this reposotory
+- missing other configurations (WEP, WPA, WPA2 ....)
+- 
+
+## My target
 My target is not to have a new access point. I want to understand the termologie and especilly the hostapd.
 If you want to use it, please take a better password than me.
-
 Using a rPi which is connected via ethernet to the internet as a WLAN access point.
 
-- I'm using a **rPi4**
-- for the os I choosed **UBUNTU server 22.04.5 LTS**.
+## lesson learned
+- wpa_supplicant is needed only if the rPi is acting as a client
+- hostapd is used if the rPi is acting as an access point
+
+
+## HW/SW used
+- **rPi4**
+- For the **OS** I choosed **UBUNTU server 22.04.5 LTS**.
 - **dnsmasq** is used for a DHCP and DNS
 - **hostapd** for the configuration of the access point
 - **networkd** is used
@@ -39,9 +49,47 @@ the file can be found here after installation:
 ```
 ### hostapd.conf examples
 #### hostapd.conf for open WiFi
+
+```
+# Wi-Fi AP OPEN
+
+# interface and driver
+interface=wlan0
+driver=none
+
+# cotrol interfaface for hostapd_cli
+#  
+ctrl_interface=/var/run/hostapd
+ctrl_interface_group=0
+
+# WiFi configuration
+ssid=wifi_OPEN
+channel=1
+hw_mode=g
+country_code=DE
+
+# WiFi encryption
+macaddr_acl=0
+ignore_broadcast_ssid=0
+```
+
 #### hostapd for open WEP
 
 ### hostapd.conf parameters
+#### interface
+#### WPA WPA2 parameter (copied from configuration which is delivered with hostapd)
+The parameter wpa is a bit field:
+bit0 = **WPA**
+bit1 = IEEE 802.11i/RSN (**WPA2**) (dot11RSNAEnabled)
+
+wpa=1 #WPA only
+wpa=2 #WPA2 only
+wpa=3 #WPA + WPA2
+
+## collection
+
+/usr/share/doc/hostapd/examples/hostapd. conf
+
 
 
 
