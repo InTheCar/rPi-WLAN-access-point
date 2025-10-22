@@ -6,8 +6,11 @@
 ## My target
 My target is not to have a access point for testing. I want to understand the termologie and especilly the hostapd 
 service.
-If you want to use it, please take a better password than me.
-Using a rPi which is connected via ethernet to the internet as a WLAN access point.
+If you want to use it, please use a better password than me.
+Using a rPi which is connected via ethernet to the internet and acting as a WLAN access point.
+For me the main usage is to sniff on the airinterface with my sniffer:
+https://github.com/InTheCar/WiFi-sniffer
+
 
 ## lesson learned
 - wpa_supplicant is needed only if the rPi is acting as a client
