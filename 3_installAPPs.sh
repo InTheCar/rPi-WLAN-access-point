@@ -18,9 +18,9 @@ echo "time for updates needed:"
 echo "$((duration / 60)) minutes and $((duration % 60)) seconds elapsed."
 echo ""
 
+#  "openvswitch-switch-dpdk"
 
 appsinstall=(
-  "openvswitch-switch-dpdk"
   "hostapd"
   "net-tools"
   "dnsmasq"

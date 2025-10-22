@@ -37,11 +37,11 @@ sudo systemctl stop NetworkManager-wait-online.service
 echo Stopping NetworkManager-dispatcher.service
 sudo systemctl stop NetworkManager-dispatcher.service
 
-echo Starting NetworkManager-dispatcher.service
+echo Disable NetworkManager-dispatcher.service
 sudo systemctl disable NetworkManager-dispatcher.service
-echo Starting NetworkManager-wait-online.service
+echo Disable NetworkManager-wait-online.service
 sudo systemctl disable NetworkManager-wait-online.service
-echo Starting NetworkManager.service
+echo Disable NetworkManager.service
 sudo systemctl disable NetworkManager.service
 
 #------------------------------------------------------------------
