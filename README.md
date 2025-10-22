@@ -32,6 +32,10 @@ https://github.com/InTheCar/WiFi-sniffer
 I made a .rtf document
 https://github.com/InTheCar/rPi-WLAN-access-point/tree/main/docs
 
+## user used
+user        : wifi
+password    : wifi
+
 ## set a wifi "security"
 During the installtion you will clone this peposetory. There you find a script to change 
 the configuration of the access point:
