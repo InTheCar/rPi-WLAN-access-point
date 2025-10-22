@@ -33,7 +33,7 @@ I made a .rtf document
 https://github.com/InTheCar/rPi-WLAN-access-point/tree/main/docs
 
 ## set a wifi "security"
-During the installtion you will clone this peposetory. Ther you find a script to change 
+During the installtion you will clone this peposetory. There you find a script to change 
 the configuration of the access point:
 
 ~/[repository rPi-WLAN-access-point]/**setWiFi.sh**
@@ -53,7 +53,15 @@ setWiFi.sh PATTERN [OPTIONS]
 
     -d : debug, more output for trouble shooting
    
-
+## The Configurations
+### open
+password: none
+### WEP
+password: wifi1
+### WPA
+password: wifi1234
+### WPA2
+password: wifi1234
 
 
 
