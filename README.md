@@ -59,32 +59,28 @@ password: none
 
 configuration file: `wifiap_OPEN`
 ### WEP
-password: wifi1
+password    : **wifi1**
+
+ssid        : **wifi_OPEN**
 
 configuration file: `wifiap_WEP`
 ### WPA
 password: wifi1234
 
+ssid        : **wifi_WPA**
+
 configuration file: `wifiap_WPA`
 ### WPA2
 password: wifi1234
+
+ssid        : **wifi_WPA2**
 
 configuration file: `wifiap_WPA2`
 
 
 
 
-The password for the access points and the login is:
 
-**wifi**
-
-The SSIDs are following this syntax:
-
-**wifi_[encryption]**
-
-wifi_OPEN -> open access point
-
-wifi_WEP  -> uses WEP
 
 
 
