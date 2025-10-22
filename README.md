@@ -39,13 +39,19 @@ the configuration of the access point:
 ~/[repository rPi-WLAN-access-point]/**setWiFi.sh**
 
 setWiFi.sh PATTERN [OPTIONS]
+
 PATTERN:
-  open : an open access point will be configured"
-   wep : an WEP (Wired Equivalent Privacy) access point will be configured"
-   wpa : an WPA (Wi-Fi Protected Access) access point will be configured"
+
+  open : an open access point will be configured
+
+   wep : an WEP (Wired Equivalent Privacy) access point will be configured
+
+   wpa : an WPA (Wi-Fi Protected Access) access point will be configured
+
 
 OPTIONS:
-    -d : debug, more output for trouble shooting"
+
+    -d : debug, more output for trouble shooting
    
 
 
