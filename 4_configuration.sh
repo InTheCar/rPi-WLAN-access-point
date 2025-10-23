@@ -68,12 +68,12 @@ sudo netplan apply
 
 
 sudo cp /etc/hostapd/hostapd_WPA_PSK.conf /etc/hostapd/hostapd.conf
-sudo systemctl unmask hostapd
-sudo systemctl enable hostapd
+sudo systemctl unmask hostapd.service
+sudo systemctl enable hostapd.service
 sudo systemctl start hostapd
 sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 sudo iptables-save
-sudo systemctl restart hostapd
+sudo systemctl restart hostapd.service
 
 
 

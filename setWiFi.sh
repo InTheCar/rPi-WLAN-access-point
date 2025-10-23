@@ -22,7 +22,7 @@ do
 		echo "password: wifi1234"
 	elif [ "$arg" == "wpa2" ];then
 		selected="wifiap_WPA2"
-		echo "wifiap_WPA configuration will be applied"
+		echo "wifiap_WPA2 configuration will be applied"
 		echo "password: wifi1234"
 	fi
 done
