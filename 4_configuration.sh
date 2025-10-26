@@ -25,31 +25,32 @@ echo "time for updates needed:"
 echo "$((duration / 60)) minutes and $((duration % 60)) seconds elapsed."
 echo ""
 
+
+
+
 #------------------------------------------------------------------
-sudo rm /etc/netplan/51-*
-echo cp -rv ./conf/etc/* /etc/
-sudo cp -rv ./conf/etc/* /etc/
-sudo chmod 600 /etc/netplan/*
 echo Stopping NetworkManager.service
 sudo systemctl stop NetworkManager.service
-echo Stopping NetworkManager-wait-online.service
-sudo systemctl stop NetworkManager-wait-online.service
-echo Stopping NetworkManager-dispatcher.service
-sudo systemctl stop NetworkManager-dispatcher.service
-
 echo Disable NetworkManager-dispatcher.service
 sudo systemctl disable NetworkManager-dispatcher.service
+
+echo Stopping NetworkManager-wait-online.service
+sudo systemctl stop NetworkManager-wait-online.service
 echo Disable NetworkManager-wait-online.service
 sudo systemctl disable NetworkManager-wait-online.service
+
+echo Stopping NetworkManager-dispatcher.service
+sudo systemctl stop NetworkManager-dispatcher.service
 echo Disable NetworkManager.service
 sudo systemctl disable NetworkManager.service
-
 #------------------------------------------------------------------
-
 echo Stopping systemd-resolved
 sudo systemctl stop systemd-resolved
 echo Disable systemd-resolved
 sudo systemctl disable systemd-resolved
+sudo unlink /etc/resolv.conf
+sudo cp /etc/resolv.conf.bak /etc/resolv.conf
+sudo cp /etc/dnsmasq.conf /etc/dnsmasq.conf.bak
 
 
 #sudo ln -s /etc/systemd/system/wifiap@wlan0.service \
@@ -58,6 +59,10 @@ echo Restart dnsmasq.service
 sudo systemctl restart dnsmasq.service
 
 #------------------------------------------------------------------
+sudo rm /etc/netplan/51-*
+echo cp -rv ./conf/etc/* /etc/
+sudo cp -rv ./conf/etc/* /etc/
+sudo chmod 600 /etc/netplan/*
 
 
 
