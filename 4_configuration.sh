@@ -49,8 +49,8 @@ sudo systemctl stop systemd-resolved
 echo Disable systemd-resolved
 sudo systemctl disable systemd-resolved
 sudo unlink /etc/resolv.conf
-sudo cp /etc/resolv.conf.bak /etc/resolv.conf
-sudo cp /etc/dnsmasq.conf /etc/dnsmasq.conf.bak
+sudo cp -v /etc/resolv.conf.bak /etc/resolv.conf
+sudo cp -v /etc/dnsmasq.conf /etc/dnsmasq.conf.bak
 
 
 #sudo ln -s /etc/systemd/system/wifiap@wlan0.service \
@@ -72,7 +72,7 @@ sudo netplan apply
 
 
 
-sudo cp /etc/hostapd/hostapd_WPA_PSK.conf /etc/hostapd/hostapd.conf
+sudo cp -v /etc/hostapd/wifiap_WPA2 /etc/hostapd/hostapd.conf
 sudo systemctl unmask hostapd.service
 sudo systemctl enable hostapd.service
 sudo systemctl start hostapd
