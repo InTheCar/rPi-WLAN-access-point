@@ -39,23 +39,21 @@ echo Stopping systemd-resolved
 sudo systemctl stop systemd-resolved
 echo Disable systemd-resolved
 sudo systemctl disable systemd-resolved
-sudo unlink /etc/resolv.conf
-sudo cp -v /etc/resolv.conf.bak /etc/resolv.conf
-sudo cp -v /etc/dnsmasq.conf /etc/dnsmasq.conf.bak
 
 
 #sudo ln -s /etc/systemd/system/wifiap@wlan0.service \
 #  /etc/systemd/system/multi-user.target.wants/wifiap@wlan0.service
-echo Restart dnsmasq.service
-sudo systemctl restart dnsmasq.service
+#echo Restart dnsmasq.service
+#sudo systemctl restart dnsmasq.service
 
 #------------------------------------------------------------------
 sudo rm /etc/netplan/51-*
 echo cp -rv ./conf/etc/* /etc/
 sudo cp -rv ./conf/etc/* /etc/
 sudo chmod 600 /etc/netplan/*
-
-
+sudo unlink /etc/resolv.conf
+sudo cp -v /etc/resolv.conf.bak /etc/resolv.conf
+sudo cp -v /etc/dnsmasq.conf /etc/dnsmasq.conf.bak
 
 sudo netplan generate
 sudo netplan apply
