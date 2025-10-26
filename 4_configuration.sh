@@ -1,11 +1,5 @@
 #!/bin/bash
-#sudo systemctl stop systemd-resolved
-#sudo systemctl disable systemd-resolved
-#sudo systemctl mask systemd-resolved
-#sudo cp ./conf/ntwrk/* /etc/systemd/network/
-#sudo systemctl enable systemd-networkd
 #------------------------------------------------------------------
-
 command=(
   "sudo snap refresh"
   "sudo apt-get update"
@@ -25,10 +19,6 @@ duration=$SECONDS
 echo "time for updates needed:"
 echo "$((duration / 60)) minutes and $((duration % 60)) seconds elapsed."
 echo ""
-
-
-
-
 #------------------------------------------------------------------
 echo Stopping NetworkManager.service
 sudo systemctl stop NetworkManager.service

@@ -3,6 +3,7 @@ command=(
   "sudo snap refresh"
   "sudo apt-get update"
   "sudo apt-get -y upgrade"
+  "sudo unattended-upgrade"
 )
 SECONDS=0
 for i in "${command[@]}"
