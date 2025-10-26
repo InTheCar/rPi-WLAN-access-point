@@ -77,18 +77,9 @@ sudo systemctl unmask hostapd.service
 sudo systemctl enable hostapd.service
 sudo systemctl start hostapd
 sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-sudo iptables-save
+sudo sh -c "iptables-save > /etc/iptables.ipv4.nat"
 sudo systemctl restart hostapd.service
 
-
-
-
-
-
-#sudo systemctl restart dhcpcd
-#sudo systemctl restart dnsmasq
-sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-sudo iptables-save
 
 
 

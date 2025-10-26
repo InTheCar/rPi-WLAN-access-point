@@ -20,6 +20,7 @@ echo ""
 
 #  "openvswitch-switch-dpdk"
 appsinstall=(
+  "screen"
   "hostapd"
   "net-tools"
   "dnsmasq"
